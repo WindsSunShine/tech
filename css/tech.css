@@ -1,0 +1,565 @@
+/*banner部分样式*/
+html{
+	width: 100%;
+}
+body{
+	width: 100%;
+	background-color: #f1f3f8;
+	overflow-x: hidden;
+	/*visibility: hidden;*/
+	overflow-y: scroll;
+}
+body>div{
+	width: 10rem;
+}
+body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-teacher,.banner-nav .page-name{
+	visibility: hidden;
+}
+#banner-module{
+	/*background-color: none;*/
+}
+#banner-module{
+	width: 10rem;
+	height: 7.5rem;
+	position: relative;
+	/*background-color: white;*/
+	overflow: hidden;
+}
+#banner{
+	width: 60rem;
+	height: 100%;
+	overflow:hidden;
+	position: absolute;
+	top: 0;
+	left: -10rem;
+}
+#banner li{
+	float: left;
+	width: 10rem;
+	height:100%;
+}
+#banner li img{
+	width: 100%;
+	height: 100%;
+}
+#banner-sort{
+	width: 1.0667rem;
+	height: 1.0667rem;
+	background-color: rgba(0,0,0,.3);
+	font-size: 0.3733rem;
+	text-align: center;
+	line-height: 1.0667rem;
+	border-radius: 100%;
+	color: white;
+	position: absolute;
+	right: 0.1333rem;
+	bottom: 0.1333rem;
+}
+.banner-nav{
+	width: 10rem;
+	height: 0.6667rem;
+	line-height: 0.6667rem;
+	color: white;
+	font-size: 0.4533rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color:rgba(0,0,0,.5);
+	padding: 0.32rem 0;
+	z-index: 999;
+}
+.page-name{
+	width: 10rem;
+	text-align: center;
+}
+.page-back{
+	position: absolute;
+	/*width: 0.2667rem;
+	height: 0.4rem;*/
+	background-image:url('../image/left_triangle.png') ;
+	/*margin-top: 0.1334rem;*/
+	left: 0.3733rem;
+	width: 0.4446rem;
+    height: 0.6668rem;
+}
+.edit-teacher{
+	width: 0.4267rem;
+	height: 0.4267rem;
+	background-image:url('../image/edit.png') ;
+	right: 1.2533rem;
+}
+.share-tech{
+	width: 0.5067rem;
+	height: 0.4267rem;
+	background-image:url('../image/share_icon.png');
+	right: 0.3733rem;
+}
+.page-back,.edit-teacher,.share-tech{
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+}
+.edit-teacher,.share-tech{
+	
+	position: absolute;
+	margin-top: 0.12rem;
+}
+
+/*教师基本信息*/
+#teacher-info{
+	/*background-color: white;*/
+}
+.teacher-indetity-info,.teacher-introduce,.teacher-course-info{
+	background-color: white;
+}
+.teacher-indetity-info{
+	padding: 0.4rem 0 0.4rem 0.2667rem;
+}
+.teacher-icon,.teacher-other-info,.teacher-follow{
+	float: left;
+}
+.teacher-icon{
+	width: 1.7333rem;
+	height: 1.7333rem;
+	border-radius: 10px;
+	background-color: #e3e3e3;
+	overflow: hidden;
+}
+.teacher-icon img{
+	width: 100%;
+	height: 100%;
+}
+.teacher-other-info{
+	width: 5.9333rem;
+
+	height: 1.4667rem;
+	margin: 0.1333rem 0.2667rem;
+}
+.teacher-name-age{
+	height: 0.4667rem;
+	line-height: 0.4667rem;
+	margin-bottom:0.1333rem;
+}
+.teacher-name,.teacher-age,.teacher-instrument,.teacher-sex{
+	float: left;
+	margin: 0 4px;
+}
+.teacher-name{
+	font-size: 0.4533rem;
+}
+.teacher-age,.teacher-instrument,.teacher-sex{
+	font-size: 0.3733rem;
+}
+.teacher-instrument{
+	padding: 2px 4px;
+	background-color: #00c176;
+	color: white;
+	position: relative;
+	top: -2px;
+	border-radius: 4px;
+}
+.teacher-introduce{
+	/*height: 0.8667rem;*/
+	color: #999;
+	font-size: 0.3733rem;
+	overflow: hidden;
+	line-height: 0.4267rem;
+	padding: 0 .4rem .4rem .4rem;
+}
+.teacher-follow{
+	width: 1.4rem;
+	height: 1.0rem;
+	text-align: center;
+	color: #00c176;
+	font-size: 0.32rem;
+	margin-top: 0.48rem;
+}
+.teacher-follow-name{
+	color: #999;
+	display: none;
+}
+.teacher-follow-num{
+	color:#333;
+	display: none;
+}
+.teacher-follow .teacher-follow-icon{
+	width: 0.5333rem;
+	height: 0.5067rem;
+	margin: 0 auto 0.10rem auto;
+}
+.teacher-follow .teacher-follow-icon img{
+	width: 100%;
+	height: 100%;
+}
+.teacher-follow span{
+	display: block;
+}
+.teacher-course-info{
+	height: 1.5467rem;
+	/*border: 1px solid #e6eaf2;*/
+	border-width: 1px 0;
+	text-align: center;
+	margin: 0.1333rem 0;
+	padding: 0.4rem 0;
+}
+.teacher-course-info>div{
+	float: left;
+	height: 100%;
+	box-sizing: border-box;
+}
+.teacher-course-title{
+	height: 0.8rem;
+	line-height: 0.8rem;
+	color: #999;
+	font-size: 0.3733rem;
+}
+.teacher-course-content{
+	font-size: 0.4267rem;
+	/*color: #ff580e;*/
+}
+.teacher-course-price,.teacher-course-age{
+	width: 3.3rem;
+}
+.teacher-school{
+	width: 3.4rem;
+	border: 1px solid #f1f3f8;
+	border-width:0 1px;
+}
+.teacher-apitude-info{
+	/*padding:0.16rem 0.3733rem;*//*12 28*/
+
+}
+.teacher-apitude-info span{
+	float: left;
+	margin-right: 0.1333rem;/*10*/
+	margin-bottom: 0.1333rem;
+	padding:0.04rem;
+	/*border: 1px solid;*/
+	font-size: 0.3467rem;
+	border-radius: 0.0667rem;
+	background-color: #DBC8A9;
+	color: white;
+}
+.teacher-apitude-info .apitude-color-instrument{
+	/*border-color: #00c176;
+	color:#00c176;*/
+	background-color: #00c176;
+}
+
+.apitude-color-time{
+	/*border-color: #ff65e8;*/
+	/*color:#ff65e8;*/
+}
+.apitude-color-degree{
+	/*border-color: #c16d00;*/
+	/*color:#c16d00;*/
+}
+.apitude-color-country{
+	/*border-color: #ffac4b;*/
+	/*color:#ffac4b;*/
+}
+.apitude-color{
+	/*border-color: #2ba4d6;*/
+	/*color:#2ba4d6;*/
+	/*display: none;*/
+}
+/*个人经历*/
+.teacher-experience{
+	padding-top: 0.5333rem;
+	background-color: white;
+	margin-bottom: 0.1333rem;
+	padding-bottom: 1px;
+}
+.module-title{
+	height: 0.5333rem;
+	line-height: 0.5333rem;
+	font-size: 0.4267rem;
+	position: relative;
+	padding-left: 0.5333rem;/*40*/
+}
+.module-title:before{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0.16rem;/*12*/
+	height: 100%;
+	background-color: #00c176;
+	content: '';
+}
+.teacher-experience-list{
+	margin-top: 0.4533rem;/*34*/
+}
+.teacher-experience-time{
+	padding-left: 0.6667rem;/*50*/
+	height: 0.3733rem;/*28*/
+	line-height: 0.3733rem;
+	color: #999;
+	position: relative;
+	font-size: 0.4267rem;
+}
+.teacher-experience-time:before{
+	position: absolute;
+	content: '';
+	width: 0.24rem;/*12*/
+	height: 0.24rem;
+	border-radius: 100%;
+	/*border: 0.04rem solid #00c176;*/ /*3*/
+	top: 0.1rem; /*7.5*/ 
+	left: 0.3rem;/*22.5*/
+	background-color: #e6eaf2;
+}
+.teacher-experience-content{
+	width: 8.4267rem; /*632*/
+	margin: 0.4rem 0 0.4rem 0.8rem; /*20 14*/
+	padding: 0.2667rem 0.1867rem;
+	position: relative;
+	font-size: 0.4267rem; /*32*/
+	background-color: #f6f6f7;
+}
+.teacher-experience-content:before{
+	position: absolute;
+	content: '';
+	height: calc(100% + 0.8rem);
+	top: -0.4rem;
+	left: -0.4rem;
+	width: 0.0267rem;
+	background-color: #e6eaf2;
+}
+/*主要成就*/
+.teacher-achievement{
+	background-color: white;
+	padding-top: 0.2933rem;
+	margin-bottom: 0.1333rem;
+	overflow: hidden;
+}
+.teacher-achievement-list{
+
+}
+.teacher-achievement-list>li{
+	padding: 0.4rem 0 0.4rem 0;
+	margin-left: 0.4rem; /*30*/
+	font-size: 0.4267rem; /*32*/
+	border-bottom: 1px solid #e6eaf2;
+}
+.teacher-achievement-list>li:last-child{
+	border-bottom:none;
+}
+.teacher-achievement-time{
+	color: #999;
+}
+.teacher-achievement-content{
+	margin-top: 0.0533rem; /*4*/
+}
+.teacher-achievement-images{
+	margin-top: 0.2667rem; /*20*/
+	position: relative;
+	height: 2.4rem;
+}
+.teacher-achievement-images-list{
+	width: 12.6667rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.teacher-achievement-images-list li{
+	width: 2.4rem;
+	height: 2.4rem; /*180*/
+	border-radius: 10px;
+	background-color: #e1e1e1;
+	float: left;
+	margin-right: 0.1333rem; /*10*/
+
+}
+.teacher-achievement-images-list li img{
+	width: 100%;
+	height: 100%;
+}
+/*视频*/
+.teacher-movies{
+	background-color: white;
+	padding-top: 0.2933rem;
+	margin-bottom: 0.1333rem;
+}
+.teacher-movie-list{
+	margin-top: 0.5333rem; /*40*/
+	padding: 0 0.1333rem; /*10*/
+}
+.teacher-movie-list li{
+	margin: 0 0.1333rem;
+	width: 4.6rem; /*345*/
+	height: 4.1333rem; /*310*/
+	float: left;
+}
+.teacher-movie-detail{
+	width: 100%;
+	height: 2.8rem; /*210*/
+	border-radius: 10px;
+	position: relative;
+	background-color: #464646;
+	background-size: 100% 100%;
+}
+.teacher-movie-detail .movie-play-button{
+	width: 0.5333rem; /*40*/
+	height: 0.5333rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -0.2667rem;
+	margin-left: -0.2667rem;
+	background: url('../image/play.png') no-repeat;
+	background-size: 100% 100%;
+}
+.teacher-movie-info{
+	height: 1.3333rem; /*100*/
+	padding: 0 0.16rem; /*12*/
+	font-size: 0.4267rem; /*32*/
+	line-height: 0.6rem; /*45*/
+	overflow: hidden;
+}
+/*教学评估*/
+.teacher-assessment-content{
+	font-size: 0.3733rem;
+}
+.teacher-assessment{
+	background-color: white;
+	padding-top: 0.2933rem;
+	margin-bottom: 1.3067rem;
+}
+.comprehensive-score-circle{
+	width: 5.3333rem;
+	height: 5.3333rem; /*400*/
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+}
+#canvas-score-circle{
+	position: absolute;
+	top: 0;left: 0;
+}
+.comprehensive-score-num{
+	font-size: 0.64rem;
+	padding-top: 1.8667rem;
+}
+.comprehensive-score-name{
+	margin-top: 0.0667rem;
+}
+.total-student-num,.total-class-time{
+	text-align: center;
+}
+.total-student-num{
+	margin-top: 0.32rem;
+}
+.total-class-time{
+	margin: 0.32rem 0;
+}
+.each-score{
+	width: 8.8rem; /*660*/
+	margin: 0 auto;
+}
+.each-score ul{
+	
+}
+.each-score li{
+	height: 0.9333rem; /*70*/
+	line-height: 0.9333rem;
+}
+.each-type-name,.each-score-bar{
+	float: left;
+}
+.each-type-name{
+	width: 1.2rem; /*90*/
+	height: 100%;
+	font-size: 0.32rem; /*24*/
+}
+.each-score-bar{
+	width: 7.6rem; /*570*/
+	height: 0.1067rem; /*8*/
+	background-color: #ececec;
+	border-radius: 0.5333rem; /*40*/
+	position: relative;
+	margin-top: 0.4133rem; /*31*/
+}
+.each-score-bar .teacher-get-score{
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #00c176;
+	border-radius: 0.5333rem;
+}
+/*50 170 50 480(40 100 240 100)*/
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 10rem;
+	height: 1.2rem; /*90*/
+	line-height: 1.2rem;
+	font-size: 0.4267rem; /*32*/
+	text-align: center;
+	background-color: white;
+	border-top: 1px solid #e6eaf2;
+}
+footer>div{
+	float: left;
+}
+.customer-service{
+	width: 7.0rem; /*525*/
+	color: #00c176;
+}
+.choose-class{
+	width: 3.0rem; /*225*/
+	background-color: #00c176;
+	color: white;
+}
+/*大图显示*/
+.check-big-image{
+
+}
+.check-big-image-list{
+	width: 40rem;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -10rem;
+}
+.check-big-image-list li{
+	width: 10rem;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+.check-big-image-list li img{
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 50%;left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+/*视频播放*/
+.check-video{
+
+}
+.check-video .video-round{
+	width: 10rem;
+	position: absolute;
+	top: 50%;left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	background-color: #333;
+}
+.check-video video{
+	width: 10rem;
+}
+/*引导分享*/
+.share_wx{
+
+}
+.share_wx img{
+	display: block;
+	position: absolute;
+	width: 8rem;
+	top: 1rem;
+	right: 1rem;
+}

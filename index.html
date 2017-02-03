@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<title>个人主页</title>
+	<script>
+	    (function(win, doc, dw) {
+	        var docEl = doc.documentElement,
+	        	width_design=750,
+                dw = dw || width_design,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var docElWidth = docEl.clientWidth;
+                    // (docElWidth > width_design) && (docElWidth = width_design);
+                    // if (!docElWidth) return;
+                    docEl.style.fontSize = docElWidth / 10 + 'px';
+                    document.getElementsByTagName('html')[0].style.fontSize=docElWidth / 10 + 'px';
+
+                    function getCurrentStyle(dom){
+                    	var obj=document.getElementsByTagName(dom)[0];
+	                    var objStyle=obj.currentStyle? obj.currentStyle : window.getComputedStyle(obj, false);
+	                    return objStyle['fontSize']
+                    }
+                    var current_fontSize=parseInt(getCurrentStyle('html'));
+                    // getCurrentStyle('html');
+
+                    if (current_fontSize==docElWidth / 10) return;
+                    document.getElementsByTagName('html')[0].style.fontSize=docElWidth*docElWidth/100/current_fontSize+'px';
+                    
+                    // alert(document.documentElement.clientWidth);
+                    // alert(document.documentElement.style.fontSize);
+                };
+	        if (!doc.addEventListener) return;
+	        win.addEventListener(resizeEvt, recalc, false);
+	    	doc.addEventListener('DOMContentLoaded', recalc, false);
+	    })(window, document, 750);
+	</script>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/tech.css">
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<input type="hidden" id="ident_type">
+	<input type="hidden" id="tuid">
+	<input type="hidden" id="course_price">
+	<input type="hidden" id="subjectName">
+	<input type="hidden" id="MyteacherName">
+	<header id="banner-module">
+		<ul id="banner">
+			<li>
+				<!-- <img src="image/banner1.png" alt=""> -->
+			</li>
+			<!-- <li class="current">
+				<img src="image/banner1.png" alt="">
+			</li>
+			<li >
+				<img src="image/banner1.png" alt="">
+			</li>
+			<li>
+				<img src="image/banner1.png" alt="">
+			</li>
+			<li>
+				<img src="image/banner1.png" alt="">
+			</li>
+			<li>
+				<img src="image/banner1.png" alt="">
+			</li> -->
+		</ul>
+		<div id="banner-sort">
+			<!-- 1/4 -->
+		</div>
+		<!-- <div class="banner-nav clearfix">
+			<div class="page-back">
+				
+			</div>
+			<div class="share-tech">
+				
+			</div>
+			<div class="edit-teacher">
+				
+			</div>
+			<div class="page-name">
+				个人主页
+			</div>
+		</div> -->
+	</header>
+	<div id="teacher-info">
+		<div class="teacher-indetity-info clearfix">
+			<div class="teacher-icon">
+				<img src="" alt="">
+			</div>
+			<div class="teacher-other-info">
+				<div class="teacher-name-age clearfix">
+					<span class="teacher-name"><!-- 刘苏卉 --></span>
+					<span class="teacher-instrument"><!-- 钢琴 --></span>
+					<span class="teacher-sex"><!-- 男 --></span>
+					<span class="teacher-age"><!-- 25岁 --></span>
+				</div>
+				<div class="teacher-apitude-info clearfix">
+					<span class="apitude-color-time">
+						工作日
+					</span>
+					<span class="apitude-color-country">
+						日本
+					</span>
+					<span class="apitude-color-degree">
+						博士
+					</span>
+					<span class="apitude-color identTag">
+						身份认证
+					</span>
+					<span class="apitude-color eduTag">
+						学历认证
+					</span>
+					<span class="apitude-color qualTag">
+						资质认证
+					</span>
+				</div>
+			</div>
+			<div class="teacher-follow">
+				<div class="teacher-follow-name">
+					关注者
+				</div>
+				<div class="teacher-follow-num">
+					123123
+				</div>
+				<div class="teacher-follow-icon">
+					<img src="image/follow.png" alt="">
+					
+				</div>
+				<span>关注</span>
+			</div>
+		</div>
+		<div class="teacher-introduce">
+			<!-- 个性签名:这个人很懒，什么都没留下！ -->
+		</div>
+		<div class="teacher-course-info clearfix">
+			<div class="teacher-course-price">
+				<div class="teacher-course-title">
+					价格
+				</div>
+				<div class="teacher-course-content">
+					<!-- ￥300 -->
+				</div>
+			</div>
+			<div class="teacher-school">
+				<div class="teacher-course-title">
+					毕业院校
+				</div>
+				<div class="teacher-course-content">
+					<!-- 中央音乐学院 -->
+				</div>
+			</div>
+			<div class="teacher-course-age">
+				<div class="teacher-course-title">
+					教龄
+				</div>
+				<div class="teacher-course-content">
+					<!-- 2年 -->
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class="teacher-experience">
+		<div class="module-title">
+			个人经历
+		</div>
+		<ul class="teacher-experience-list">
+			<!-- <li>
+				<div class="teacher-experience-time">
+					1997年
+				</div>
+				<div class="teacher-experience-content">
+					我以公费考入上海音乐学院研究生部，师从林应荣教授。并担任谭盾先生“天顶上的一滴水一水乐堂”大提琴独奏，成功演出百余场。
+				</div>
+			</li>
+			<li>
+				<div class="teacher-experience-time">
+					1997年
+				</div>
+				<div class="teacher-experience-content">
+					我以公费考入上海音乐学院研究生部，师从林应荣教授。并担任谭盾先生“天顶上的一滴水一水乐堂”大提琴独奏，成功演出百余场。
+				</div>
+			</li> -->
+		</ul>
+	</div>
+	<div class="teacher-achievement">
+		<div class="module-title">
+			主要成就
+		</div>
+		<ul class="teacher-achievement-list">
+			<!-- <li>
+				<div class="teacher-achievement-time">
+					2011年8月
+				</div>
+				<div class="teacher-achievement-content">
+					获上海“海顿杯”室内乐比赛弦乐四重奏优秀奖
+				</div>
+				<div class="teacher-achievement-images">
+					<ul class="teacher-achievement-images-list clearfix">
+						<li showBig></li>
+						<li showBig></li>
+						<li showBig></li>
+						<li showBig></li>
+						<li showBig></li>
+					</ul>
+				</div>
+			</li> -->
+		</ul>
+	</div>
+	<div class="teacher-movies">
+		<div class="module-title">
+			视频展示
+		</div>
+		<ul class="teacher-movie-list clearfix">
+			<!-- <li>
+				<div class="teacher-movie-detail">
+					<div class="movie-play-button">
+						
+					</div>
+				</div>
+				<div class="teacher-movie-info">
+					最多二十四个字哟最多二十四个字哟最多二...
+				</div>
+			</li> -->
+		</ul>
+	</div>
+	<div class="teacher-assessment">
+		<div class="module-title">
+			综合评估
+		</div>
+		<div class="teacher-assessment-content">
+			<div class="comprehensive-score-circle">
+				<div class="comprehensive-score-num">0</div>
+				<div class="comprehensive-score-name">
+					综合评分
+				</div>
+				<div class="compare-other-teacher">
+					高于同行<span>0%</span>
+				</div>
+				<canvas style="width:100%;height:100%;" id="canvas-score-circle"></canvas>
+			</div>
+			<div class="total-student-num">
+				<!-- 累计 <span>0</span> 人上课 -->
+				学生：<span>0</span>
+			</div>
+			<div class="total-class-time">
+				<!-- 累计授课 <span>0</span> 课时 -->
+				课时数：<span>0</span>
+			</div>
+			<div class="each-score">
+				<ul>
+					<li class="clearfix">
+						<div class="each-type-name">
+							守时:
+						</div>
+						<div class="each-score-bar">
+							<div class="teacher-get-score onTimePoint"></div>
+						</div>
+						<!-- <div class="each-score-num onTimePoint">
+							9.8
+						</div> -->
+					</li>
+					<li class="clearfix">
+						<div class="each-type-name">
+							专业:
+						</div>
+						<div class="each-score-bar">
+							<div class="teacher-get-score professPoint"></div>
+						</div>
+						<!-- <div class="each-score-num professPoint">
+							9.8
+						</div> -->
+					</li>
+					<li class="clearfix">
+						<div class="each-type-name">
+							教学:
+						</div>
+						<div class="each-score-bar">
+							<div class="teacher-get-score teachPoint"></div>
+						</div>
+						<!-- <div class="each-score-num teachPoint">
+							9.8
+						</div> -->
+					</li>
+					<li class="clearfix">
+						<div class="each-type-name">
+							课堂:
+						</div>
+						<div class="each-score-bar">
+							<div class="teacher-get-score classPoint"></div>
+						</div>
+						<!-- <div class="each-score-num classPoint">
+							9.8
+						</div> -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="customer-service">
+			联系客服
+		</div>
+		<div class="choose-class">
+			立即选课
+		</div>
+	</footer>
+	<div class="layer check-big-image">
+		<ul class="check-big-image-list">
+			<li>
+				<img src="image/banner1.png" alt=""> 
+			</li>
+			<li>
+				<img src="image/banner1.png" alt="">
+			</li>
+			<li>
+				<img src="image/banner1.png" alt="">
+			</li>
+			<li>
+				<img src="image/banner1.png" alt="">
+			</li>
+		</ul>
+	</div>
+	<div class="layer check-video">
+		<div class="video-round">
+			<video id="video" controls="controls" src="image/movie.mp4" x-webkit-airplay webkit-playsinline preload="none">
+			</video>
+		</div>
+	</div>
+	<div class="layer share_wx">
+		<img src="image/share.png" alt="">
+	</div>
+</body>
+<script src="js/sea.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- <script src="sea-modules/sea-debug.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="js/seajs-preload.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> -->
+<script>
+	var appId = '';
+	var timestamp = '';
+	var nonceStr = '';
+	var signature = '';
+	var title = '在音乐客APP发现一位很厉害的音乐老师，推荐给你看看';
+	var desc  = '音乐客教 「钢琴、小提琴等」 的 「李」 老师，教的特别好，开来跟我一起进步吧~';
+	var link ;
+	var imgUrl= '';
+	seajs.config({
+		alias: {
+			"jquery": "./jquery-3.1.1.min.js"
+		}
+	})
+	// seajs.use(["./sea-modules/jquery.js"],function($){
+	// 	console.log($);
+	// });
+	seajs.use(['./js/tech.js','./js/jquery-3.1.1.min.js','banner_nav.js'], function(tech,$,banner_nav) {
+		$(function(){
+			tech.init(function(){
+				tech.iden();
+			});
+			// tech.iden();
+			tech.getWX();
+			// draw_arc.draw_arc(8.9);
+			banner_nav.floatEvent();
+		});
+	});
+</script>
+
+</html>
