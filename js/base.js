@@ -1,18 +1,19 @@
 define(function(require, exports, module) {
 	var $ = require('jquery');
 	// 阻止冒泡
-	exports.stopBubble=function(e) { 
+	exports.stopBubble=function(e) {
 		e = e || window.event;
 		if(e.targetTouches&&e.targetTouches.length==1){
 			e.preventDefault();
 		}
-		if(e.stopPropagation) { //W3C阻止冒泡方法  
-			e.stopPropagation();  
+		if(e.stopPropagation) { //W3C阻止冒泡方法
+			e.stopPropagation();
 		} else {
-			e.cancelBubble = true; //IE阻止冒泡方法  
-		}  
+			e.cancelBubble = true; //IE阻止冒泡方法
+		}
 	}
 	exports.getJsonByPost=function(url,params,callback){
+						console.log("url="+url);
 		$.ajax({
 	        url: url,
 	        type: 'POST',
@@ -21,6 +22,7 @@ define(function(require, exports, module) {
 	        async: true
 	    })
 	    .done(function(data) {
+					console.log(data);
 	        callback(data);
 	    });
 	}

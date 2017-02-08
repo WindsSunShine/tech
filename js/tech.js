@@ -1,25 +1,32 @@
-var url11m  = 'http://123.56.14.144:8090';
-var url_123 = "https://api.yinyueke.com/assets/tech/tech_info.html?teacherId=80";
+
+var mainUrl  = 'https://api.yinyueke.com/';
+var imageUrl = 'http://123.56.14.144:8090/img/';
+var newMainUrl = 'http://123.56.31.4:8081/v2/getTeacherInfo';
+
 define(function(require, exports, module) {
     var $ = require('jquery');
     var base=require('base');
     // '.jpg'
     var url_1='http://img-srv.yinyueke.com/',
     // xx,xx
-        url_2= url11m + '/img/200x200/';
+      url_2='http://123.56.14.144:8090/img/200x200/';
 
     exports.init=function(callback){
         var initStyleClick=require('initStyleClick');
         initStyleClick.initStyle();
         initStyleClick.clickEvent();
 
-        var access_token=base.getQueryURL('access_token');
-        var url= url_123 ; //+ '/v1/teacher/detail'
+        // var access_token=base.getQueryURL('access_token');
+        // var access_token="f42bf6b92895a231cbc5866507bdb861be08df11";
+        var access_token = "";
+        // var url= mainUrl +'v1/teacher/detail';
 
-        url=!access_token?url:url+'?access_token='+access_token;
-        params={'teacherId':base.getQueryURL('teacherId')};
-
-        base.getJsonByGet(url,function(data){
+        var url = 'http://123.56.31.4:8081/v2/getTeacherInfo';
+        // url=!access_token?url:url+'?access_token='+access_token;
+        // params={'teacherId':base.getQueryURL('teacherId')};
+        // params={'teacherId':"51"};
+        params={'teacher_id':"1"};
+        base.getJsonByPost(url,params,function(data){
         // alert('请求数据成功');
         // banner部分
         var banner=data.banner,banner_html='',banner_list=[];
@@ -28,17 +35,21 @@ define(function(require, exports, module) {
                 banner_list.push(banner[i_banner]);
             }
             var banner_length=banner_list.length;
-            banner_html+='<li><img src="http://123.56.14.144:8090/img/800x600/'+banner_list[banner_length-1]+'" alt=""></li>';
+            // banner_html+='<li><img src="http://123.56.14.144:8090/img/800x600/'+banner_list[banner_length-1]+'" alt=""></li>';
+            banner_html =banner_html + "<li><img src="+ imageUrl + "800x600/" + banner_list[banner_length-1] + " alt=''></li>";
             for (var i_banner_list = 0; i_banner_list < banner_length; i_banner_list++) {
                 var i_src=banner_list[i_banner_list];
-                banner_html+='<li><img src="http://123.56.14.144:8090/img/800x600/'+i_src+'" alt=""></li>';
+                // banner_html+='<li><img src="http://123.56.14.144:8090/img/800x600/'+i_src+'" alt=""></li>';
+                banner_html = banner_html + "<li><img src="+ imageUrl + "800x600/" + i_src + " alt=''></li>";
             }
-            banner_html+='<li><img src="http://123.56.14.144:8090/img/800x600/'+banner_list[0]+'" alt=""></li>';
+            // banner_html+='<li><img src="http://123.56.14.144:8090/img/800x600/'+banner_list[0]+'" alt=""></li>';
+            banner_html =  banner_html + "<li><img src ="+ imageUrl + "800x600/" + banner_list[0]+ " alt = ''></li>";
             $('#banner').html(banner_html).css({'width':(banner_length+2)*10+'rem'});
 
             $('#banner li:eq(1)').addClass('current');
             $('#banner-sort').html('1/'+(banner_length));
             var slide=require('slide');
+            console.log(slide);
             // slide.start();
             if (banner_length>=2) {
                 slide.touchMove();
@@ -47,9 +58,10 @@ define(function(require, exports, module) {
 
 
         //教师个人信息
-        $('.teacher-icon img').attr('src','http://123.56.14.144:8090/img/100x100/'+data.headIcon);
-        link='http://123.56.14.144:8090/img/100x100/'+data.headIcon;
-
+        // $('.teacher-icon img').attr('src','http://123.56.14.144:8090/img/100x100/'+data.headIcon);
+        $('.teacher-icon img').attr('src',imageUrl + '100x100/' + data.headIcon);
+        // link='http://123.56.14.144:8090/img/100x100/'+data.headIcon;
+        link = imageUrl + '100x100/'+ data.headIcon;
         $('.teacher-name').html(data.name);
         // $('.teacher-age').html(data.age+'岁').css({'background-image':data.gender=="男"?"url('image/male.png')":"url('image/female.png')"});
         data.subject?$('.teacher-instrument').html(data.subject):$('.teacher-instrument').hide();
@@ -130,9 +142,10 @@ define(function(require, exports, module) {
 
         //视频
         var video_html='';
+
         if (data.videoUrl) {
             for (i_video in data.videoUrl){
-                video_html+='<li video_src="'+data.videoUrl[i_video]+'"><div style="background-image:'+'url('+changeSrc(data.prctureSrc[i_video])+')" class="teacher-movie-detail"><div class="movie-play-button"></div></div>';
+                video_html+='<li video_src="'+'https://vod.yinyueke.com/Act-ss-mp4-sd/365cc4de653b405f90f0dd7b1edacba5/43_1.mp4"'+'"><div style="background-image:'+'url('+changeSrc(data.prctureSrc[i_video])+')" class="teacher-movie-detail"><div class="movie-play-button"></div></div>';
                 video_html+='<div class="teacher-movie-info">'+data.descContent[i_video]+'</div></li>';
             }
             $('.teacher-movie-list').html(video_html);
@@ -142,26 +155,6 @@ define(function(require, exports, module) {
         else{
             $('.teacher-movies').css('display','none');
         }
-
-
-
-        //教学评估
-        $('.total-student-num span').html(data.stuNum);
-        $('.total-class-time span').html(data.couNum);
-        $('.teacher-get-score.onTimePoint').css({'width':parseFloat(data.onTimePoint)*10+'%'});
-        $('.each-score-num.onTimePoint').html(data.onTimePoint);
-        $('.teacher-get-score.professPoint').css({'width':parseFloat(data.professPoint)*10+'%'});
-        $('.each-score-num.professPoint').html(data.professPoint);
-        $('.teacher-get-score.teachPoint').css({'width':parseFloat(data.teachPoint)*10+'%'});
-        $('.each-score-num.teachPoint').html(data.teachPoint);
-        $('.teacher-get-score.classPoint').css({'width':parseFloat(data.classPoint)*10+'%'});
-        $('.each-score-num.classPoint').html(data.classPoint);
-        $('.comprehensive-score-circle .comprehensive-score-num').html(data.multPoint);
-
-        //绘制半圆弧
-        var draw_arc=require('draw_arc');
-        draw_arc.draw_arc(parseFloat(data.multPoint));
-        $('.compare-other-teacher span').html(data.rank+'%');
 
 
         setTimeout(function(){

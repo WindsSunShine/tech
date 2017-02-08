@@ -1,3 +1,4 @@
+/**
 define(function(require, exports, module) {
 	var $ = require('jquery');
 	exports.draw_arc=function(score){
@@ -19,8 +20,9 @@ define(function(require, exports, module) {
 	    ctx.beginPath();
 	    ctx.arc(c_width/2,c_width/2,arc_radius,0,2*Math.PI*score/10,0);
 	    ctx.strokeStyle = '#00c176';
-	    
+
 	    ctx.stroke();
 	    ctx.closePath();
 	}
 });
+**/

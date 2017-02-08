@@ -20,7 +20,7 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 }
 #banner-module{
 	width: 10rem;
-	height: 7.5rem;
+	height: 6.7rem;
 	position: relative;
 	/*background-color: white;*/
 	overflow: hidden;
@@ -43,16 +43,16 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 	height: 100%;
 }
 #banner-sort{
-	width: 1.0667rem;
-	height: 1.0667rem;
+	width: 1.05rem;
+	height: 1.05rem;
 	background-color: rgba(0,0,0,.3);
 	font-size: 0.3733rem;
 	text-align: center;
-	line-height: 1.0667rem;
+	line-height: 1.15rem;
 	border-radius: 100%;
 	color: white;
 	position: absolute;
-	right: 0.1333rem;
+	right: 0.2633rem;
 	bottom: 0.1333rem;
 }
 .banner-nav{
@@ -97,10 +97,10 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 .page-back,.edit-teacher,.share-tech{
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	
+
 }
 .edit-teacher,.share-tech{
-	
+
 	position: absolute;
 	margin-top: 0.12rem;
 }
@@ -119,9 +119,9 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 	float: left;
 }
 .teacher-icon{
-	width: 1.7333rem;
-	height: 1.7333rem;
-	border-radius: 10px;
+	width: 1.5333rem;
+	height: 1.5333rem;
+	border-radius: 0.7666rem;
 	background-color: #e3e3e3;
 	overflow: hidden;
 }
@@ -130,10 +130,9 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 	height: 100%;
 }
 .teacher-other-info{
-	width: 5.9333rem;
-
+	width: 6rem;
 	height: 1.4667rem;
-	margin: 0.1333rem 0.2667rem;
+	margin: 0.2333rem 0.0997rem;
 }
 .teacher-name-age{
 	height: 0.4667rem;
@@ -142,32 +141,38 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 }
 .teacher-name,.teacher-age,.teacher-instrument,.teacher-sex{
 	float: left;
-	margin: 0 4px;
+	margin: 0 5px;
 }
 .teacher-name{
-	font-size: 0.4533rem;
+	font-size: 0.5253rem;
 }
 .teacher-age,.teacher-instrument,.teacher-sex{
 	font-size: 0.3733rem;
 }
 .teacher-instrument{
-	padding: 2px 4px;
-	background-color: #00c176;
-	color: white;
+	padding: 2px 2px;
+	font-size: 0.3421rem;
+	background-color: white;
+	border: solid 1.88px;
+	border-color: #FFC028;
+	color: #FFC028;
 	position: relative;
-	top: -2px;
-	border-radius: 4px;
+	top: -3px;
+	border-radius: 0.4496rem;
 }
 .teacher-introduce{
-	/*height: 0.8667rem;*/
-	color: #999;
-	font-size: 0.3733rem;
+
+	margin: 0 0 0.0333rem 0 ;
+	color: #333;
+	font-size: 0.4512rem;
 	overflow: hidden;
-	line-height: 0.4267rem;
-	padding: 0 .4rem .4rem .4rem;
+	line-height: 0.5489rem;
+	padding: 0.342rem 0.273rem 0.342rem 0.273rem ;
+	box-sizing: border-box;
 }
+
 .teacher-follow{
-	width: 1.4rem;
+	width: 1.3rem;
 	height: 1.0rem;
 	text-align: center;
 	color: #00c176;
@@ -183,23 +188,24 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 	display: none;
 }
 .teacher-follow .teacher-follow-icon{
-	width: 0.5333rem;
-	height: 0.5067rem;
-	margin: 0 auto 0.10rem auto;
+	width: 1.6315rem;
+	height: 0.7368rem;
+	/*margin: 0 auto 0.10rem auto;*/
+	margin-right: 0.1rem;
 }
 .teacher-follow .teacher-follow-icon img{
 	width: 100%;
 	height: 100%;
 }
 .teacher-follow span{
-	display: block;
+	display: none;
 }
 .teacher-course-info{
 	height: 1.5467rem;
 	/*border: 1px solid #e6eaf2;*/
 	border-width: 1px 0;
 	text-align: center;
-	margin: 0.1333rem 0;
+	margin: 0.0333rem 0;
 	padding: 0.4rem 0;
 }
 .teacher-course-info>div{
@@ -222,23 +228,34 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 }
 .teacher-school{
 	width: 3.4rem;
+
+}
+.teacher-course-age {
 	border: 1px solid #f1f3f8;
 	border-width:0 1px;
+
 }
+
 .teacher-apitude-info{
 	/*padding:0.16rem 0.3733rem;*//*12 28*/
-
+  margin: 0.3933rem 0;
 }
 .teacher-apitude-info span{
 	float: left;
-	margin-right: 0.1333rem;/*10*/
+	/*margin-right: 0.1333rem;/*10*/*/
 	margin-bottom: 0.1333rem;
 	padding:0.04rem;
 	/*border: 1px solid;*/
 	font-size: 0.3467rem;
-	border-radius: 0.0667rem;
-	background-color: #DBC8A9;
-	color: white;
+	/*border-radius: 0.0667rem;
+	background-color: #DBC8A9;*/
+	color: #999999;
+}
+.imageTag {
+	margin-top: 0.0800rem;/*10*/
+	margin-left: 0.1333rem;/*10*/
+	width:12px;
+	height:9px;
 }
 .teacher-apitude-info .apitude-color-instrument{
 	/*border-color: #00c176;
@@ -267,15 +284,17 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 .teacher-experience{
 	padding-top: 0.5333rem;
 	background-color: white;
-	margin-bottom: 0.1333rem;
+	margin-bottom: 0.0333rem;
 	padding-bottom: 1px;
 }
 .module-title{
 	height: 0.5333rem;
 	line-height: 0.5333rem;
 	font-size: 0.4267rem;
-	position: relative;
-	padding-left: 0.5333rem;/*40*/
+	position: relative;*/
+	padding-left: 0.5333rem;
+	text-align: center;
+	color: #999999;
 }
 .module-title:before{
 	position: absolute;
@@ -283,7 +302,7 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 	top: 0;
 	width: 0.16rem;/*12*/
 	height: 100%;
-	background-color: #00c176;
+	/*background-color: #00c176;*/
 	content: '';
 }
 .teacher-experience-list{
@@ -293,20 +312,23 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 	padding-left: 0.6667rem;/*50*/
 	height: 0.3733rem;/*28*/
 	line-height: 0.3733rem;
-	color: #999;
+	font-weight: 900;
+	color: #333333;
 	position: relative;
 	font-size: 0.4267rem;
 }
 .teacher-experience-time:before{
 	position: absolute;
 	content: '';
-	width: 0.24rem;/*12*/
-	height: 0.24rem;
-	border-radius: 100%;
+	width: 0.22rem;/*12*/
+	height: 0.22rem;
+	/*border-radius: 100%;*/
+	border:2px solid #e6eaf2;
+	border-radius:50%;
 	/*border: 0.04rem solid #00c176;*/ /*3*/
-	top: 0.1rem; /*7.5*/ 
-	left: 0.3rem;/*22.5*/
-	background-color: #e6eaf2;
+	top: 0.03rem; /*7.5*/
+	left: 0.245rem;/*22.5*/
+	background-color: white;
 }
 .teacher-experience-content{
 	width: 8.4267rem; /*632*/
@@ -329,7 +351,7 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 .teacher-achievement{
 	background-color: white;
 	padding-top: 0.2933rem;
-	margin-bottom: 0.1333rem;
+	margin-bottom: 0.0333rem;
 	overflow: hidden;
 }
 .teacher-achievement-list{
@@ -339,16 +361,18 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 	padding: 0.4rem 0 0.4rem 0;
 	margin-left: 0.4rem; /*30*/
 	font-size: 0.4267rem; /*32*/
-	border-bottom: 1px solid #e6eaf2;
+	border-bottom: 1px solid #F5F5F5;
 }
 .teacher-achievement-list>li:last-child{
 	border-bottom:none;
 }
 .teacher-achievement-time{
-	color: #999;
+	color: #333;
+	font-weight: bold;
+
 }
 .teacher-achievement-content{
-	margin-top: 0.0533rem; /*4*/
+	margin-top: 0.219rem; /*4*/
 }
 .teacher-achievement-images{
 	margin-top: 0.2667rem; /*20*/
@@ -378,7 +402,7 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 .teacher-movies{
 	background-color: white;
 	padding-top: 0.2933rem;
-	margin-bottom: 0.1333rem;
+	margin-bottom: 1.3067rem;
 }
 .teacher-movie-list{
 	margin-top: 0.5333rem; /*40*/
@@ -414,80 +438,10 @@ body>div,footer,#banner,#banner-sort,.banner-nav .share-tech,.banner-nav .edit-t
 	padding: 0 0.16rem; /*12*/
 	font-size: 0.4267rem; /*32*/
 	line-height: 0.6rem; /*45*/
+	margin-top: 0.16rem;
 	overflow: hidden;
 }
 /*教学评估*/
-.teacher-assessment-content{
-	font-size: 0.3733rem;
-}
-.teacher-assessment{
-	background-color: white;
-	padding-top: 0.2933rem;
-	margin-bottom: 1.3067rem;
-}
-.comprehensive-score-circle{
-	width: 5.3333rem;
-	height: 5.3333rem; /*400*/
-	position: relative;
-	text-align: center;
-	margin: 0 auto;
-}
-#canvas-score-circle{
-	position: absolute;
-	top: 0;left: 0;
-}
-.comprehensive-score-num{
-	font-size: 0.64rem;
-	padding-top: 1.8667rem;
-}
-.comprehensive-score-name{
-	margin-top: 0.0667rem;
-}
-.total-student-num,.total-class-time{
-	text-align: center;
-}
-.total-student-num{
-	margin-top: 0.32rem;
-}
-.total-class-time{
-	margin: 0.32rem 0;
-}
-.each-score{
-	width: 8.8rem; /*660*/
-	margin: 0 auto;
-}
-.each-score ul{
-	
-}
-.each-score li{
-	height: 0.9333rem; /*70*/
-	line-height: 0.9333rem;
-}
-.each-type-name,.each-score-bar{
-	float: left;
-}
-.each-type-name{
-	width: 1.2rem; /*90*/
-	height: 100%;
-	font-size: 0.32rem; /*24*/
-}
-.each-score-bar{
-	width: 7.6rem; /*570*/
-	height: 0.1067rem; /*8*/
-	background-color: #ececec;
-	border-radius: 0.5333rem; /*40*/
-	position: relative;
-	margin-top: 0.4133rem; /*31*/
-}
-.each-score-bar .teacher-get-score{
-	width: 0%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: #00c176;
-	border-radius: 0.5333rem;
-}
-/*50 170 50 480(40 100 240 100)*/
 footer{
 	position: fixed;
 	bottom: 0;
